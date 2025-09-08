@@ -44,8 +44,7 @@
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="2"
-                d="M4 6h16M4 12h8m-8 6h16"
-              />
+                d="M4 6h16M4 12h8m-8 6h16" />
             </svg>
           </div>
           <ul
@@ -70,8 +69,7 @@
       </div>
       <div class="navbar-end">
         <a class="btn border-none btn-xs sm:btn-sm md:btn-md rounded-3xl font-semibold bg-[#facc15] text-[#15803d] text-xs">
-        Plant a Tree</a
-        >
+        Plant a Tree</a>
       </div>
     </section>
     <!-- hero section -->
@@ -89,8 +87,7 @@
             for future generations.
           </p>
           <div>
-            <a class="btn border-none rounded-3xl font-semibold bg-[#facc15] text-[#15803d]">Get Involved</a
-            >
+            <a class="btn border-none rounded-3xl font-semibold bg-[#facc15] text-[#15803d]">Get Involved</a>
           </div>
         </div>
       </div>
@@ -98,6 +95,97 @@
         <img src="assets/hero-leaf2.png" alt="" />
       </div>
     </section>
-    
+
+     <!-- card section -->
+    <section id="gallery" class="bg-[#f0fdf4] pt-[50px] lg:pt-[100px]">
+      <h3 class="text-center text-4xl font-semibold mb-[20px] lg:mb-[40px]">
+        Choose Your Trees
+      </h3>
+
+      <div id="cards-container" class="lg:flex justify-center gap-3">
+        <!-- categories -->
+        <div class="bg-[#f0fdf4]">
+          <h3
+            class="font-semibold text-[20px] text-center lg:text-left lg:pl-3"
+          >
+            Categories
+          </h3>
+
+          <div id="categories-container">
+            <div
+              class="categories menu bg-[#f0fdf4] rounded-box w-56 mx-auto lg:mx-0 text-center lg:text-left" >
+              <a onclick="loadTreeCards()"
+                id="all-items"
+               class="hover:bg-[#15803d] categories hover:text-white p-2 hover:rounded-sm cursor-pointer" > All Trees </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- cards -->
+        <div class="lg:flex gap-3">
+          <!-- loading spinner -->
+          <div id="spinner" class="lg:w-[880px] flex justify-center hidden">
+            <span class="loading loading-spinner loading-xl"></span>
+          </div>
+          <div
+            id="card-grid"
+            class="grid grid-cols-1 lg:grid-cols-3 gap-5"></div>
+
+          <!-- cart -->
+          <div class="flex justify-center lg:block mt-[30px] lg:mt-0">
+            <!-- cart container -->
+            <div
+              id="cart-container"
+              class="menu bg-base-200 rounded-box lg:w-56 w-70 p-5"
+            >
+              <!-- cart title -->
+              <h3 class="font-bold text-lg mb-[10px]">Your Cart</h3>
+
+              <!-- cart details -->
+              <div id="cart-details"></div>
+
+              <!-- cart total price -->
+              <div
+                class="flex justify-between items-center border-t border-gray-500 mt-[10px] pt-5"
+              >
+                <h3 class="font-bold">Total</h3>
+                <h3 id="cart-tree-price" class="font-bold">৳0</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+     <!-- modal -->
+    <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle"></dialog>
+
+    <!-- about section -->
+    <section id="about" class="bg-[#f0fdf4] py-[100px] px-10 lg:px-0">
+      <h3 class="text-center mb-[40px] text-3xl font-bold">
+        About the Campaign
+      </h3>
+      <div class="lg:flex justify-center items-center gap-[30px]">
+        <figure class="mb-[30px]">
+          <img
+            class="rounded-[10px] mx-auto"
+            src="assets/about.png"
+            alt="Movie"
+          />
+        </figure>
+        <div>
+          <h2 class="lg:w-[500px]">
+            Green Earth is a global tree plantation initiative dedicated to
+            fighting climate change. Since our start, we’ve planted over 500,000
+            trees worldwide. By joining our campaign, you help restore forests,
+            create habitats for wildlife, and combat global warming.
+          </h2>
+          <ul class="list-disc p-5">
+            <li>Restoration of natural habitats</li>
+            <li>Improvement of air quality</li>
+            <li>Support for local communities</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 </body>
 </html>
